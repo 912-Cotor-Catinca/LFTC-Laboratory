@@ -1,0 +1,13 @@
+var 2a, b, c;
+read(2a);
+read(b);
+read(c);
+var d -> a;
+if (d > b) {
+d -> b;
+}
+if (d > c) {
+d -> c
+}
+print_out("the maximum number is:);
+print_out(d);

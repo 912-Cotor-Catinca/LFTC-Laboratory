@@ -1,0 +1,8 @@
+var a, b;
+var result -> min(a, b);
+while (result > 0) {
+if (a % result -> 0 and b % rsult -> 0)
+break;
+result -> result - 1;
+}
+print_out(result);
