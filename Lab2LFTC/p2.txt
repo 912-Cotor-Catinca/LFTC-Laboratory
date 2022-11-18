@@ -1,0 +1,17 @@
+var x;
+read(x);
+if (x -> 0 or x -> 1) {
+    print_out("not prime");
+    stop_program;
+}
+if( x-> 2) {
+    print_out("is prime");
+    stop_program;
+}
+for(d-> 3; d*d<= x; d+= 2) {
+    if ( x % d -> 0) {
+        print_out("not prime");
+        stop program;
+    }
+}
+print_out("is prime");

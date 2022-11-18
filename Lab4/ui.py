@@ -3,7 +3,7 @@ from fa import FiniteAutomata
 
 class UI:
     def readFA(self):
-        self.fa = FiniteAutomata.readFromFile('FA.in')
+        self.fa = FiniteAutomata.readFromFile('FA.txt.in')
 
     def displayALL(self):
         print(self.fa)
@@ -23,6 +23,10 @@ class UI:
     def checkDFA(self):
         print(self.fa.isDfa())
 
+    def checkAccepted(self):
+        seq = input()
+        print(self.fa.isAccepted(seq))
+
     def menu(self):
         print("1.Read FA from file")
         print("2.Display FA")
@@ -31,7 +35,7 @@ class UI:
         print("5.Display FA transitions")
         print("6.Display FA final states")
         print("7.Check DFA")
-        # print("8.Check accepted sequence")
+        print("8.Check accepted sequence")
 
     def run(self):
         commands = {'1': self.readFA,
@@ -40,7 +44,8 @@ class UI:
                     '4': self.displayAlphabet,
                     '5': self.displayTransitions,
                     '6': self.displayFinalStates,
-                    '7': self.checkDFA}
+                    '7': self.checkDFA,
+                    '8': self.checkAccepted}
         exit = False
         while not exit:
             self.menu()
